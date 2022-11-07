@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="-138.5" y="246.5">Student</node>
+    <node x="129.0" y="-238.5">Title</node>
+    <node x="-359.0" y="301.5">Lecturer</node>
+    <node x="161.97894376304794" y="155.44483950939457">Address</node>
+    <node x="-71.5" y="-249.5">Course</node>
+    <node x="-349.1298930062631" y="-317.8987473903967">Person</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Student" target="Person" relationship="GENERALIZATION">
+      <point x="0.0" y="-159.5" />
+      <point x="-4.0" y="226.0" />
+      <point x="-224.0" y="226.0" />
+      <point x="0.0" y="183.8987473903967" />
+    </edge>
+    <edge source="Lecturer" target="Person" relationship="GENERALIZATION">
+      <point x="40.0" y="-104.5" />
+      <point x="0.0" y="183.8987473903967" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.4381909547738693" showDependencies="false" x="26.000000000000227" y="179.50000000000006" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
