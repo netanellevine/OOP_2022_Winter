@@ -111,3 +111,62 @@ i = 0
 while i < len(a):
     print(a[i])
     i += 1
+
+a = [i for i in range(5)]
+print(a)
+
+print('_____________________________________________________________________________________')
+print('_____________________________________________________________________________________')
+
+# Lists
+arr = [1, 2, 3, 4, 5]
+print(arr)
+arr = ['This', 'is', 'Python']
+print(arr)
+arr = [True, 3, 'Hello', (5, 3, 2), [1, 2, 3]]
+print(arr)
+for i in arr:
+    print(type(i))
+
+print(len(arr))
+arr.append(6)
+arr[-1] = 5
+arr.insert(3, "Hi")
+print(arr)
+print(arr.pop())  # == arr.pop(0)
+print(arr.pop(3))
+arr.reverse()
+print(arr)
+print(arr.index(3))
+# print(arr.index(0))  # Will throw a ValueError
+print(arr.count(0))
+arr.remove(3)
+print(arr)
+
+a = [1, 2, 3, 4, 5]
+print(a[0])
+print(a[-1])
+print(a[-2])
+# print(a[6])  # Will throw a IndexError
+print(a[:3])
+print(a[1:4])
+print(a[2:])
+b = [6, 7, 8, 9, 10]
+c = a + b
+print(c)
+a.extend(b)
+print(a)
+
+print('_____________________________________________________________________________________')
+print('_____________________________________________________________________________________')
+
+# Tuples
+tup = (1, 2, 3)
+print(tup, type(tup))
+# tup[2] = 10  # Will throw a TypeError because tuple is immutable
+print(tup)
+a, b, c = tup
+print(a, b, c)
+tup *= 5
+print(tup)
+
