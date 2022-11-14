@@ -133,7 +133,7 @@ arr.append(6)
 arr[-1] = 5
 arr.insert(3, "Hi")
 print(arr)
-print(arr.pop())  # == arr.pop(0)
+print(arr.pop())  # == arr.pop(-1)
 print(arr.pop(3))
 arr.reverse()
 print(arr)
@@ -169,4 +169,33 @@ a, b, c = tup
 print(a, b, c)
 tup *= 5
 print(tup)
+
+print('_____________________________________________________________________________________')
+print('_____________________________________________________________________________________')
+
+# Dictionaries
+this_dict = {1: 'This', 2: 'is', 3: 'a', 4: 'dictionary'}
+this_dict[5] = '!'
+print(this_dict)
+this_dict = {1: 'This', 2: 'is', 3: 'a', 4: 'dictionary', 5: '!', 5: '!!!'}
+print(this_dict)  # Only one of them will be obtained
+
+# Access
+print(this_dict[3])
+print(this_dict.get(2))
+
+# Remove
+this_dict.pop(5)
+print(this_dict)
+
+keys = this_dict.keys()
+print(keys)
+values = this_dict.values()
+print(values)
+
+print(this_dict.items())
+
+for k, v in this_dict.items():
+    print('Key ->', k, 'Value ->', v)
+
 
