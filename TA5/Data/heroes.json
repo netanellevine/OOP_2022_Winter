@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Batman",
+        "power": 100
+    },
+    {
+        "name": "Superman",
+        "power": 200
+    },
+    {
+        "name": "GreenLantern",
+        "power": 150
+    },
+    {
+        "name": "WonderWoman",
+        "power": 180
+    },
+    {
+        "name": "Batgirl",
+        "power": 120
+    },
+    {
+        "name": "Batkid",
+        "power": 90
+    }
+]
