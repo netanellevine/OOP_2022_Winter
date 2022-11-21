@@ -29,6 +29,7 @@ class Stack:
             return self.elements[self.current]
         else:
             del self.current
+            raise StopIteration
 
 
 if __name__ == '__main__':

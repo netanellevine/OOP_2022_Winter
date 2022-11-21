@@ -1,6 +1,7 @@
 import numpy as np
 
-# This is the asnwer to the question I asked in the last TA about painting a zone in a picture
+
+# This is the answer to the question I asked in the last TA about painting a zone in a picture
 
 def rec_paint(mat: list[[]], p: tuple[int, int], old_color: int, new_color: int):
     x, y = p

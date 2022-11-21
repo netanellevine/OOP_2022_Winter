@@ -33,7 +33,7 @@ class Car:
         self.year = year
         self.hp = hp
 
-    def __str__(self):
+    def __repr__(self):
         return f'Car ->(plate number: {self.plate_number}, year: {self.year}, horse power: {self.hp})'
 
 
@@ -48,11 +48,11 @@ class Ford(Car):
 
 
 c = Car(11111, 2020, 100)
-# a = [c for _ in range(10)]
+a = [c for _ in range(10)]
 print(c)
 
 f = Ford(22222, 2019, 120, "Focus", 120000)
-print("Ford method ->", f)
-print("Car method ->", super(type(f), f).__str__())
+# print("Ford method ->", f)
+# print("Car method ->", super(type(f), f).__str__())
 
 
