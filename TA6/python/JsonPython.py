@@ -22,7 +22,7 @@ with open("Data/readable_data.json", "w") as write_file:
 
 """Create a dictionary from a json file"""
 
-# Create data to read
+# Create Data to read
 h1 = Hero("Batman", 100)
 h2 = Hero("Superman", 200)
 h3 = Hero("GreenLantern", 150)

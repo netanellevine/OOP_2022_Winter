@@ -1,7 +1,7 @@
 
 
 # This program illustrates an example of Binary Search Tree using Python
-# Binary Search Tree, is a node-based binary tree data structure which has the following properties:
+# Binary Search Tree, is a node-based binary tree Data structure which has the following properties:
 #
 # The left subtree of a node contains only nodes with keys less than the node’s key.
 # The right subtree of a node contains only nodes with keys greater than the node’s key.
@@ -15,12 +15,12 @@ class Node(object):
         self.rightChild = None
 
     def insert(self, data):
-        """ For inserting the data in the Tree """
+        """ For inserting the Data in the Tree """
         if self.data == data:
-            return False  # As BST cannot contain duplicate data
+            return False  # As BST cannot contain duplicate Data
 
         elif data < self.data:
-            ''' Data less than the root data is placed to the left of the root '''
+            ''' Data less than the root Data is placed to the left of the root '''
             if self.leftChild:
                 return self.leftChild.insert(data)
             else:
@@ -28,7 +28,7 @@ class Node(object):
                 return True
 
         else:
-            ''' Data greater than the root data is placed to the right of the root '''
+            ''' Data greater than the root Data is placed to the right of the root '''
             if self.rightChild:
                 return self.rightChild.insert(data)
             else:
@@ -58,7 +58,7 @@ class Node(object):
         if self is None:
             return None
 
-        # if current node's data is less than that of root node, then only search in left subtree else right subtree
+        # if current node's Data is less than that of root node, then only search in left subtree else right subtree
         if data < self.data:
             self.leftChild = self.leftChild.delete(data, root)
         elif data > self.data:
@@ -95,7 +95,7 @@ class Node(object):
         return self
 
     def find(self, data):
-        """ This function checks whether the specified data is in tree or not """
+        """ This function checks whether the specified Data is in tree or not """
         if data == self.data:
             return True
         elif data < self.data:
