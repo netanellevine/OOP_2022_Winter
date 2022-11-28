@@ -12,7 +12,7 @@ class Stack:
             self.counter -= 1
             return self.elements.pop(0)
         else:
-            raise Exception("The stack is empty")
+            raise TypeError("The stack is empty")
 
     def top(self):
         if self.counter > 0:

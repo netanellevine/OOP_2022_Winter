@@ -12,8 +12,8 @@ data = {
 
 # Let's turn it into a json file
 
-with open("Data/data.json", "w") as write_file:
-    json.dump(data, write_file)
+with open("Data/data.json", "w") as curser:
+    json.dump(data, curser)
 
 # As we can see, it's really hard to read, let's make it easier to read
 
@@ -30,7 +30,7 @@ h4 = Hero("WonderWoman", 180)
 h5 = Hero("Batgirl", 120)
 h6 = Hero("Batkid", 90)
 li = [h1, h2, h3, h4, h5, h6]
-data2 = list()
+data2 = []
 for hero in li:
     data2.append({'name': hero.name, 'power': hero.power})
 
@@ -47,3 +47,4 @@ for d in data3:
     power = d['power']
     heroes.append(Hero(name, power))
 print(heroes)
+print(sorted(heroes))

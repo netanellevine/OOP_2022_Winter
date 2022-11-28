@@ -21,6 +21,10 @@ class Hero:
             return True
         return False
 
+    def __add__(self, other):
+        self.name = self.name + " & " + other.name
+        self.power += other.power
+
     """Support the < operator"""
 
     def __lt__(self, other):
@@ -31,8 +35,8 @@ class Hero:
     def __repr__(self):
         return "(" + self.name + ", " + str(self.power) + ")"
 
-    def __str__(self):
-        return "(" + self.name + "\t " + str(self.power) + ")"
+    # def __str__(self):
+    #     return "(" + self.name + "\t " + str(self.power) + ")"
 
     def __hash__(self):
         return hash(self.__repr__())
@@ -48,7 +52,7 @@ class HeroComparator:
         return a sorted collection according to the compare type.
     """
 
-    def sort_by_type(self, comp_type: int = 0):
+    def sort_by_type(self, comp_type: int = 0):  # str == "power" elif str == "name"
         if comp_type == 0:  # compare by power
             return sorted(self.collection)
         elif comp_type == 1:  # compare by the length of the name
@@ -65,13 +69,17 @@ class HeroComparator:
 
 if __name__ == '__main__':
     h1 = Hero("Batman", 100)
-    print(str(h1))
-    print(h1.__str__())
-    print(repr(h1))
-    print(h1.__repr__())
-    print("_________________________________________________________________________")
-    print("_________________________________________________________________________")
-
+    # h2 = Hero("Batman", 100)
+    # print(h1 == h2)
+    # print(h1 + h2)
+    # print(str(h1))
+    # print(h1.__str__())
+    # print(repr(h1))
+    # print(h1.__repr__())
+    # print(h1)
+    # print("_________________________________________________________________________")
+    # print("_________________________________________________________________________")
+    #
     h2 = Hero("Superman", 200)
     h3 = Hero("GreenLantern", 150)
     h4 = Hero("WonderWoman", 180)
@@ -83,21 +91,24 @@ if __name__ == '__main__':
     l = sorted(li)
     print("sort by power:")
     print(l)
-    l2 = sorted(li, key=lambda x: len(x.name), reverse=False)
+    my_key = lambda x: (len(x.name), x.power)
+    l2 = sorted(li, key=my_key)
     print("sort by the length of the name:")
     print(l2)
+    a = lambda x: (x + x)
+    print(a(5))
     l3 = sorted(li, key=lambda x: str(x.name), reverse=False)
     print("lexicographically:")
     print(l3)
     print("_________________________________________________________________________")
     print("_________________________________________________________________________")
-
-    hc = HeroComparator(li)
-    print("default:")
-    print(hc.sort_by_type(0))
-    print("Lexicographically")
-    print(hc.sort_by_type(2))
-    print("by power and then lexicographically")
-    print(hc.sort_by_type(3))
-    print("lexicographically and then by power")
-    print(hc.sort_by_type(4))
+    #
+    # hc = HeroComparator(li)
+    # print("default:")
+    # print(hc.sort_by_type(0))
+    # print("Lexicographically")
+    # print(hc.sort_by_type(2))
+    # print("by power and then lexicographically")
+    # print(hc.sort_by_type(3))
+    # print("lexicographically and then by power")
+    # print(hc.sort_by_type(4))
