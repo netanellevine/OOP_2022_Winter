@@ -1,7 +1,7 @@
 import unittest
 from unittest import TestCase
 
-from Stack import Stack
+from Lesson5.Stack import Stack
 
 
 class TestStack(unittest.TestCase):
@@ -25,7 +25,7 @@ class TestStack(unittest.TestCase):
 
     def test_pop_empty_case(self):
         s = Stack()
-        with self.assertRaises(TypeError):
+        with self.assertRaises(Exception):
             s.pop()
 
     def test_pop_regular_pop_not_raises(self):
@@ -33,7 +33,7 @@ class TestStack(unittest.TestCase):
         try:
             s.pop()
             self.assertEqual(1, 1)
-        except TypeError:
+        except Exception:
             self.fail()
 
     def test_push_empty_case(self):
@@ -71,8 +71,7 @@ class TestStack(unittest.TestCase):
     def test_constructor(self):
         s1 = Stack()
         self.assertIsInstance(s1, Stack)
-        self.assertIsInstance(7.2, float)
 
     def test_constructor2(self):
         l = []
-        self.assertNotIsInstance(l, Stack)
+        self.assertIsInstance(l, Stack)
