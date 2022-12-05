@@ -1,8 +1,10 @@
-public class FirstMultythread extends  Thread {
+package Basics;
+
+public class FirstMultithreading extends  Thread {
 
     private int threadNumber;
 
-    public FirstMultythread(int threadNumber){
+    public FirstMultithreading(int threadNumber){
         this.threadNumber = threadNumber;
 
     }

@@ -1,8 +1,10 @@
-public class SecondMultythread implements  Runnable {
+package Basics;
+
+public class SecondMultithreading implements  Runnable {
 
     private int threadNumber;
 
-    public SecondMultythread(int threadNumber){
+    public SecondMultithreading(int threadNumber){
         this.threadNumber = threadNumber;
 
     }
