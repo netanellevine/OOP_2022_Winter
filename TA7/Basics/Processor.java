@@ -23,7 +23,7 @@ public class Processor {
             scanner.nextLine();
             System.out.println(Thread.currentThread().getName()  + "-> Return key pressed...");
             notify();
-//            Thread.sleep(5000);
+            Thread.sleep(5000);
         }
     }
 

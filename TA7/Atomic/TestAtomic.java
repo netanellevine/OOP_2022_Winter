@@ -58,7 +58,7 @@ public class TestAtomic {
         t2.join();
 
         // displaying the count
-        System.out.println("count=" + t.getCount());
+        System.out.println("count = " + t.getCount());
     }
 }
 

@@ -14,22 +14,22 @@ public class MyThreads {
      * 3 - Preemptive-Priority Scheduling
      */
     public static void main(String[] args) throws InterruptedException {
-//         FirstMultithreading myThread = new FirstMultithreading(1);
-//         FirstMultithreading myThread2 = new FirstMultithreading(2);
+         FirstMultithreading myThread = new FirstMultithreading(1);
+         FirstMultithreading myThread2 = new FirstMultithreading(2);
 
 //         myThread.setPriority(Thread.MIN_PRIORITY);
-//        myThread.setPriority(Thread.NORM_PRIORITY);
-//        myThread.setPriority(Thread.MAX_PRIORITY);
+//         myThread.setPriority(Thread.NORM_PRIORITY);
+//         myThread.setPriority(Thread.MAX_PRIORITY);
 
 
 //        myThread.setDaemon(true);
         
-        // myThread.run();
-        // myThread2.run();
+//         myThread.run();
+//         myThread2.run();
 
 //        myThread.start();
 //        myThread.join();
-
+//
 //        myThread2.start();
 //        myThread2.join();
 

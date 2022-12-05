@@ -1,6 +1,6 @@
 package Basics;
 
-public class FirstMultithreading extends  Thread {
+public class FirstMultithreading extends Thread {
 
     private final int threadNumber;
 
@@ -10,11 +10,11 @@ public class FirstMultithreading extends  Thread {
     }
     @Override
     public void run(){
-        for (int i = 0; i < 6; i++){
+        for (int i = 0; i < 6; i++) {
             System.out.println(i + " from thread -> " + this.threadNumber);
-            // if (this.threadNumber == 2)
-            //     throw new RuntimeException();
-            
+//             if (this.threadNumber == 2)
+//                 throw new RuntimeException();
+//
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
