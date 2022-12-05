@@ -2,7 +2,7 @@ package Basics;
 
 public class SecondMultithreading implements  Runnable {
 
-    private int threadNumber;
+    private final int threadNumber;
 
     public SecondMultithreading(int threadNumber){
         this.threadNumber = threadNumber;

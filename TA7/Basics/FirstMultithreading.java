@@ -2,7 +2,7 @@ package Basics;
 
 public class FirstMultithreading extends  Thread {
 
-    private int threadNumber;
+    private final int threadNumber;
 
     public FirstMultithreading(int threadNumber){
         this.threadNumber = threadNumber;
