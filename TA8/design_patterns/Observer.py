@@ -1,7 +1,7 @@
 from TA5.python.Stack import Stack
 
 
-class Observable:
+class Observer:
     def notify(self):
         raise NotImplementedError("")
 
@@ -9,7 +9,7 @@ class Observable:
         raise NotImplementedError("")
 
 
-class Number1(Observable):
+class Number1(Observer):
     def __init__(self, num: int):
         self.value = num
 
@@ -22,7 +22,7 @@ class Number1(Observable):
         print("Number 1: " + str(self.value))
 
 
-class Number2(Observable):
+class Number2(Observer):
     def __init__(self, num: int):
         self.value = num
 
@@ -35,7 +35,7 @@ class Number2(Observable):
         print("Number 2: " + str(self.value))
 
 
-class Number3(Observable):
+class Number3(Observer):
     def __init__(self, num: int):
         self.value = num
 
@@ -48,21 +48,21 @@ class Number3(Observable):
         print("Number 3: " + str(self.value))
 
 
-class Observer:
+class Observable:
     def __init__(self):
         self.__observed = []
 
-    def add_observable(self, obs: Observable):
-        self.__observed.append(obs)
+    def add_observer(self, observer: Observer):
+        self.__observed.append(observer)
 
     def notify_all(self):
-        for obs in self.__observed:
-            obs.notify()
+        for observer in self.__observed:
+            observer.notify()
 
 
-obs = Observer()
-obs.add_observable(Number1(100))
-obs.add_observable(Number2(100))
-obs.add_observable(Number3(1))
+obs = Observable()
+obs.add_observer(Number1(100))
+obs.add_observer(Number2(100))
+obs.add_observer(Number3(1))
 for i in range(10):
     obs.notify_all()

@@ -1,7 +1,7 @@
 import threading
 import time
 
-# thread = threading.Thread(target=func_for_thread, args=(arg1, arg2))
+# thread = threading.Thread(target=func_for_thread, args=(arg1,arg2))
 # thread.start()
 # thread.run()
 # thread.join()
@@ -34,11 +34,13 @@ def example2():
         t = threading.Thread(target=count, args=(k,))
         threads.append(t)
         t.start()  # what about join?
+        # t.join()
 
 
 def count(n):
-    for i in range(5):  # different range?
+    for i in range(100):  # different range?
         print(f'Thread number: {n} -->{i}  ')
+        # time.sleep(0.1)
 
 
 # Events -> Objects that can communicate with all the threads

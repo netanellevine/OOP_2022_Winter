@@ -5,10 +5,10 @@ class DBConnection(object):
     Therefore, we will have only one instance of the class, and each object will have it
     """
 
-    def __new__(self):
-        if not hasattr(self, 'instance'):
-            self.instance = super(DBConnection, self).__new__(self)
-        return self.instance
+    def __new__(cls):
+        if not hasattr(cls, 'instance'):
+            cls.instance = super(DBConnection, cls).__new__(cls)
+        return cls.instance
 
 
 con = DBConnection()
