@@ -1,4 +1,4 @@
-package Lesson8.FactoryAbstractFactory;
+package design_patterns_java.FactoryAbstractFactory;
 
 import java.util.HashMap;
 import java.util.Map;

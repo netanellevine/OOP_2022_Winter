@@ -1,6 +1,6 @@
-package Lesson8.Adapter;
+package design_patterns_java.Adapter;
 
-public class OrderButton implements Drunkable{
+public class OrderButton implements Drinkable {
     private BeerBottle bottle;
 
     @Override

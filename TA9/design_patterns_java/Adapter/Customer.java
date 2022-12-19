@@ -1,4 +1,4 @@
-package Lesson8.Adapter;
+package design_patterns_java.Adapter;
 
 /**
  * Most of the bars offer beer to their customers.
@@ -8,7 +8,7 @@ package Lesson8.Adapter;
  * let's model our objects:
  * Customer: a customer. we will want a name and an order button.
  * BeerBottle: a beer bottle.
- * Drunkable: an interface that the OrderButton object implements and used to order beer.
+ * Drinkable: an interface that the OrderButton object implements and used to order beer.
  * when the customer will click on the OrderButton, he will expect to get beer from the tap,
  * but instead he will get beer from a bottle
  */

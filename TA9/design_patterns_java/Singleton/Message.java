@@ -1,8 +1,8 @@
-package Lesson8.Singltone;
+package design_patterns_java.Singleton;
 
 public class Message {
-    private int fromUserID;
-    private String content;
+    private final int fromUserID;
+    private final String content;
 
     public Message(int fromUserID, String content) {
         this.fromUserID = fromUserID;

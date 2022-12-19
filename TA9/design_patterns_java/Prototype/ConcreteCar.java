@@ -1,4 +1,4 @@
-package Lesson8.Prototype;
+package design_patterns_java.Prototype;
 
 /**
  * A prototype design pattern allow you to return a clone of a "prototype" object instead of initializing
