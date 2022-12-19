@@ -3,9 +3,7 @@ from time import sleep
 from threading import Thread
 from threading import Condition
 
-lock = threading.Lock()
-cond = threading.Condition(lock=lock)
-counter = 0
+
 
 """
 In this example we will use conditions, which we will use like we use wait and notify in java.
@@ -30,8 +28,10 @@ RLock:
     We can still use wait and notify.
 """
 
-
+counter = 0
 def exmp1():
+    lock = threading.Lock()
+    cond = Condition(lock=lock)
 
     def count():
         global counter
@@ -43,7 +43,7 @@ def exmp1():
             cond.wait()
             print(threading.current_thread().name + " is now awake")
             cond.notify()
-            sleep(1)
+            # sleep(1)
             print(f'count value is -> {counter}\n')
             counter += 1
             print(threading.current_thread().name + " left the locked block")
@@ -62,7 +62,7 @@ def exmp2():
     # target function to prepare some work
     def task(condition, work_list):
         # block for a moment
-        sleep(1)
+        sleep(2)
         # add data to the work list
         work_list.append(33)
         # notify a waiting thread that the work is done
@@ -88,7 +88,7 @@ def exmp2():
 
 
 if __name__ == '__main__':
-    # exmp1()
-    exmp2()
+    exmp1()
+    # exmp2()
 
 

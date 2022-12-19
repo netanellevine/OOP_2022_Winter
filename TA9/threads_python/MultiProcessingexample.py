@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     # creating processes
     p1 = multiprocessing.Process(target=worker1)
-    p2 = multiprocessing.Process(target=worker1)
+    p2 = multiprocessing.Process(target=worker2)
 
     # starting processes
     p1.start()

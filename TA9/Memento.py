@@ -1,4 +1,4 @@
-from Lesson5.Stack import Stack
+from TA5.python.Stack import Stack
 from copy import deepcopy
 
 class UndoableStack:
@@ -28,6 +28,7 @@ class UndoableStack:
 
     def __str__(self):
         return str(self.stack)
+
 
 stack = UndoableStack()
 stack.push(1)
