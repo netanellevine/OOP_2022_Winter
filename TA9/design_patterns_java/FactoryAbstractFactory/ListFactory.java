@@ -1,4 +1,4 @@
-package Lesson8.FactoryAbstractFactory;
+package design_patterns_java.FactoryAbstractFactory;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -14,10 +14,11 @@ public class ListFactory {
             case ("Dynamic"):{
                 return new ArrayList();
             }
-            case default:{
-                return new LinkedList();
-            }
+//            case default:{
+//                return new LinkedList();
+//            }
         }
+        return new LinkedList();
     }
 
     public static void main(String[] args) {

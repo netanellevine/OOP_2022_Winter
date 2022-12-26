@@ -1,4 +1,4 @@
-package Lesson8.Singltone;
+package design_patterns_java.Singleton;
 
 public class UserMessageBox {
     private static SystemMessageBox messageBox=null;

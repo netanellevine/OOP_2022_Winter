@@ -1,4 +1,4 @@
-package Lesson8.Prototype;
+package design_patterns_java.Prototype;
 
 public class Main {
     public static void main(String[] args) {

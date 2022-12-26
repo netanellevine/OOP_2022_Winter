@@ -1,4 +1,4 @@
-package Lesson8.Adapter;
+package design_patterns_java.Adapter;
 
 public class BeerBottle {
     public void getBeerFromBottle(){

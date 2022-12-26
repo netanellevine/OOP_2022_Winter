@@ -1,4 +1,4 @@
-package Lesson8.Singltone;
+package design_patterns_java.Singleton;
 
 
 import java.util.HashMap;

@@ -1,11 +1,11 @@
-package Lesson8.Singltone;
+package design_patterns_java.Singleton;
 
 import java.util.ArrayList;
 
 public class MessageBox {
-    private ArrayList<Message> incoming;
+    private final ArrayList<Message> incoming;
     public MessageBox(){
-        incoming=new ArrayList<>();
+        incoming = new ArrayList<>();
     }
 
     public synchronized boolean isEmpty(){
