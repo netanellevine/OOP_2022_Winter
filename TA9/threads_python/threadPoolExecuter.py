@@ -53,7 +53,6 @@ def f3():
         print(np.round(result, 2))
 
 
-
 if __name__ == '__main__':
     # f1()
     # f2()

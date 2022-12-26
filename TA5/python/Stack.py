@@ -31,6 +31,9 @@ class Stack:
             del self.current
             raise StopIteration
 
+    def __str__(self):
+        return str(self.elements)
+
 
 if __name__ == '__main__':
     s = Stack()
@@ -43,8 +46,8 @@ if __name__ == '__main__':
     s.push(7)
     s.push(8)
 
-    for val in s:
-        print(val)
+    for n in s:
+        print(n)
 
     # it = s.__iter__()
     # while it is not None:
