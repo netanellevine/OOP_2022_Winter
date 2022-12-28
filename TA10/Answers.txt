@@ -1,0 +1,44 @@
+1.  There will be no output at all from the function. f3 does not release the lock so f4 function will be stuck
+    and will never enter the block. Since we used join in the main, we have to wait till f4 is finished, but it will
+    never happen, so there will be no output.
+
+
+
+
+
+
+
+
+
+2.  In row 44 we need to add f3_lock.release() in order to release the RLock and then f4 can work.
+    another answer will be in row 44
+
+
+
+
+
+
+
+
+
+
+
+
+3.  The output will be [1]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4.  The use of the stack is not thread safe. although we used locks, the function of the stack are not thread safe,
+    so using the function of the stack are not thread safe.

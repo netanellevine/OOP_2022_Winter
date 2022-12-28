@@ -2,9 +2,10 @@ import threading
 
 lock = threading.Lock()
 
+
 """
 1. What will be the output? explain
-2. How to fix the problem, you can change one row at most
+2. How to fix the problem, you can change/modify one row at most
 """
 
 
@@ -16,9 +17,11 @@ def func():
 
 
 def func2():
-    lock.acquire()
-    print(threading.current_thread().name + " ello")
-    lock.release()
+    with lock:
+        print(threading.current_thread().name + " ello")
+
+
+
 
 
 t1 = threading.Thread(target=func, name="First thread")
@@ -40,4 +43,21 @@ print("All of the threads are finished")
 
 
 
+"""
+1. First thread h.
+Since rlock is a regular lock, it cannot lock the same lock multiple times, so it will wait forever till the lock in 
+func 2 will be released.
 
+
+
+
+
+
+
+
+
+
+
+
+2. Row 2: rlock = threading.RLock()
+"""
