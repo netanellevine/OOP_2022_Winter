@@ -32,6 +32,14 @@ def matrix_mult_regular_compact(A, B):
     return ans
 
 
+"""
+a=[1,2,3]
+b=[4,5,6]
+zip(a,b)
+[(1,4),(2,5),(3,6)]
+"""
+
+
 def matrix_mult_compact(A, B):
     return [[sum(a * b for a, b in zip(A_row, B_col)) for B_col in zip(*B)] for A_row in A]
 
@@ -95,8 +103,9 @@ if __name__ == '__main__':
     X = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
     Y = [[2, 4, 6], [4, 6, 8], [8, 9, 1]]
 
-    X = [[i for i in range(300)] for _ in range(300)]
-    Y = [[i for i in range(300)] for _ in range(300)]
+    X = [[i for i in range(1000)] for _ in range(1000)]
+    Y = [[i for i in range(1000)] for _ in range(1000)]
+
 
     f1()
     f2()

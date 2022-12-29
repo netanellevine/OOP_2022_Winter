@@ -23,7 +23,6 @@ def func2():
 
 
 
-
 t1 = threading.Thread(target=func, name="First thread")
 t2 = threading.Thread(target=func, name="Second thread")
 t1.start()

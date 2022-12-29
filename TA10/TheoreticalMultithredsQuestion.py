@@ -41,6 +41,7 @@ def f3():
     stack.pop()
     stack.push(2)
     stack.push(20)
+    f3_lock.release()
 
 
 def f4():
@@ -50,17 +51,22 @@ def f4():
         stack.pop()
 
 
-t1 = threading.Thread(target=f1)
-t2 = threading.Thread(target=f2)
-t3 = threading.Thread(target=f3)
-t4 = threading.Thread(target=f4)
-t1.start()
-t2.start()
-t3.start()
-t4.start()
-stack.pop()
-t1.join()
-t2.join()
-t3.join()
-t4.join()
-print(stack)
+
+
+
+if __name__ == '__main__':
+
+    t1 = threading.Thread(target=f1)
+    t2 = threading.Thread(target=f2)
+    t3 = threading.Thread(target=f3)
+    t4 = threading.Thread(target=f4)
+    t1.start()
+    t2.start()
+    t3.start()
+    t4.start()
+    stack.pop()
+    t1.join()
+    t2.join()
+    t3.join()
+    t4.join()
+    print(stack)
