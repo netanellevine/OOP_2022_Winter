@@ -1,10 +1,10 @@
 
 
 # This program illustrates an example of Binary Search Tree using Python
-# Binary Search Tree, is a node-based binary tree Data structure which has the following properties:
+# Binary Search Tree, is a data-based binary tree Data structure which has the following properties:
 #
-# The left subtree of a node contains only nodes with keys less than the node’s key.
-# The right subtree of a node contains only nodes with keys greater than the node’s key.
+# The left subtree of a data contains only nodes with keys less than the data’s key.
+# The right subtree of a data contains only nodes with keys greater than the data’s key.
 # The left and right subtree each must also be a binary search tree.
 # There must be no duplicate nodes.
 
@@ -54,17 +54,17 @@ class Node(object):
         return current
 
     def delete(self, data, root):
-        """ For deleting the node """
+        """ For deleting the data """
         if self is None:
             return None
 
-        # if current node's Data is less than that of root node, then only search in left subtree else right subtree
+        # if current data's Data is less than that of root data, then only search in left subtree else right subtree
         if data < self.data:
             self.leftChild = self.leftChild.delete(data, root)
         elif data > self.data:
             self.rightChild = self.rightChild.delete(data, root)
         else:
-            # deleting node with one child
+            # deleting data with one child
             if self.leftChild is None:
 
                 if self == root:
@@ -86,7 +86,7 @@ class Node(object):
                 self = None
                 return temp
 
-            # deleting node with two children
+            # deleting data with two children
             # first get the inorder successor
             temp = self.minValueNode(self.rightChild)
             self.data = temp.data

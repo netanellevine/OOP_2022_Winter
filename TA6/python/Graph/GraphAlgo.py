@@ -21,7 +21,7 @@ class Trio:
 class Father:
     def __init__(self, prev: int, weight: float):
         """
-        This class is used to save the previous node and current route weight
+        This class is used to save the previous data and current route weight
         """
         self.prev: int = prev
         self.weight: float = weight

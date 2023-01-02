@@ -5,12 +5,45 @@ from TA5.python.Stack import Stack
 You are given the stack class we used in previous lessons.
 Observe the following code.
 1.  What will be the output of the main function? Explain.
+
+
+
+
+
+
+
 2.  Add one code statement in order to fix the problem you faced in question 1, Write which row you added
     the statement to, what is the statement and why it fix the problem.
+    
+    
+    
+    
+    
+    
+    
+    
 3.  What is the output now?
+
+
+
+
+
+
+
+
+
 4.  is this manipulation of the stack thread safe right now? if it does, explain why, if not, add one code
     statement that will prove it is not or explain why it's not thread safe
 """
+
+
+
+
+
+
+
+
+
 
 stack = Stack()
 f1_lock = threading.RLock()
@@ -60,13 +93,18 @@ if __name__ == '__main__':
     t2 = threading.Thread(target=f2)
     t3 = threading.Thread(target=f3)
     t4 = threading.Thread(target=f4)
+
     t1.start()
     t2.start()
     t3.start()
     t4.start()
+
     stack.pop()
+
     t1.join()
     t2.join()
     t3.join()
     t4.join()
+
     print(stack)
+    print("DONE!")

@@ -28,7 +28,7 @@ def my_sum(a, b):
 #     return [val for val in range(size)]
 
 
-def generate_list(size: int = 5, flag: bool = False) -> list:
+def generate_list(size: int, flag: bool) -> list:
     if not flag:
         return [val for val in range(size)]
     return [random.randint(1, size * 10) for i in range(size)]

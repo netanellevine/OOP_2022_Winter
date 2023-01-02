@@ -47,13 +47,32 @@ class Node:
     def setWeight(self, w):
         self.weight = w
 
+
     def __repr__(self) -> str:
-        return f'Node: id: {self.__index}, (x,y): ({self.__x},{self.__y}), in_deg: {self.in_deg}, out_deg: ' \
-               f'{self.out_deg}, weight: {self.weight}, color: {self.color}'
+        return f'{{"id": {self.__index}, "(x,y)": "({self.__x},{self.__y})", "in_deg": {self.in_deg}, "out_deg": ' \
+               f'{self.out_deg}, "weight": {self.weight}, "color": {self.color}}}'
+
+
+    def toJson(self):
+        data = {
+            "index": self.__index,
+            "x": self.__x,
+            "y": self.__y,
+            "weight": self.weight,
+            "color": self.color,
+            "in_deg": self.in_deg,
+            "out_deg": self.out_deg
+        }
+
+        path = 'data/'
+        filename = f'node_{self.__index}_.json'
+        with open(path + filename, "w") as write_file:
+            json.dump(data, write_file, indent=4)
+            print(f'Created file: {filename}')
+
 
 
 counter = 0
-
 
 def getRandomNode():
     global counter
@@ -68,30 +87,44 @@ def getRandomNode():
 
 
 def getRandomNodeList(n):
-    # output = []
-    # for i in range(n):
-    #     output.append(getRandomNode())
-    # return output
-    return [getRandomNode() for _ in range(n)]
+    output = []
+    for i in range(n):
+        output.append(getRandomNode())
+    return output
+    # return [getRandomNode() for _ in range(n)]
 
 
-def toJson(n: Node):
-    data = {
-        "index": n.getIndex(),
-        "x": n.getX(),
-        "y": n.getY(),
-        "weight": n.getWeight(),
-        "color": n.getColor(),
-        "in_deg": n.getInDegree(),
-        "out_deg": n.getOutDegree()
-    }
+def AllToJson(nodes: [Node]):
 
-    filename = str(n.getIndex()) + ".json"
-    with open(filename, "w") as write_file:
+    data = [json.loads(str(n)) for n in nodes]
+
+    path = 'data/'
+    filename = f'nodes-{len(nodes)}_.json'
+    with open(path + filename, "w") as write_file:
         json.dump(data, write_file, indent=4)
+        print(f'Created file: {filename}')
+
 
 
 if __name__ == '__main__':
-    lst = getRandomNodeList(20)
-    with ThreadPoolExecutor(max_workers=4) as executor:
-        thread1 = executor.map(toJson, lst)
+    lst = getRandomNodeList(5)
+    # for node in lst:
+    #     node.toJson()
+
+    AllToJson(lst)
+
+    # with ThreadPoolExecutor(max_workers=4) as executor:
+    #     thread1 = executor.map(toJson, lst)
+
+
+
+
+
+
+
+
+
+
+
+
+

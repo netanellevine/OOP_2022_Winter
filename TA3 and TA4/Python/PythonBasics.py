@@ -9,7 +9,7 @@ print(this_is_float)
 print(type(this_is_float))
 print()
 
-this_is_string = 'Hello'
+this_is_string = "'h'Hello"
 print(this_is_string)
 print(type(this_is_string))
 print()
@@ -80,7 +80,9 @@ if a >= b:
 else:
     print('b is bigger!')
 
+
 a = [1, 2, 3, 4, 5]
+
 if 5 in a:
     print(f'5 is in a -> {a}')
     print(5, 'is in a ->', a)
@@ -100,8 +102,8 @@ print('_________________________________________________________________________
 print('_____________________________________________________________________________________')
 
 # Loops:
-i = 0
-for i in range(len(a)):
+
+for i in range(1, len(a), 2):
     print(a[i])
 
 for num in a:
@@ -119,6 +121,7 @@ print('_________________________________________________________________________
 print('_____________________________________________________________________________________')
 
 # Lists
+
 arr = [1, 2, 3, 4, 5]
 print(arr)
 arr = ['This', 'is', 'Python']
@@ -175,7 +178,7 @@ print('_________________________________________________________________________
 
 # Dictionaries
 this_dict = {1: 'This', 2: 'is', 3: 'a', 4: 'dictionary'}
-this_dict[5] = '!'
+this_dict['1'] = '!'
 print(this_dict)
 this_dict = {1: 'This', 2: 'is', 3: 'a', 4: 'dictionary', 5: '!', 5: '!!!'}
 print(this_dict)  # Only one of them will be obtained
