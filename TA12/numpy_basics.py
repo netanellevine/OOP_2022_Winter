@@ -237,3 +237,9 @@ np.linalg.fractional_matrix_power() - Raise a square matrix to the (real) power 
 np.linalg.solve_banded() - Solve a linear matrix equation, or system of linear scalar equations for x, given a banded matrix A and a right-hand side.
 np.linalg.solveh_banded() - Solve a linear matrix equation, or system of linear scalar equations for x, given a banded Hermitian or symmetric matrix A and a right-hand side.
 """
+
+
+a = np.arange(12)
+print(a)
+a = a.reshape((4, 3))
+print(a)

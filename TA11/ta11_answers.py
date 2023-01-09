@@ -1,4 +1,5 @@
 from collections import Counter
+from bisect import bisect_left
 
 
 def intersection(l1, l2):
@@ -16,11 +17,6 @@ def intersection(l1, l2):
 
 
 
-
-
-
-
-
 def difference(l1, l2):
     output = []
     for x in l1:
@@ -35,12 +31,7 @@ def difference(l1, l2):
 
 
 
-
-
-
-
-
-def binarySearch(arr, k):
+def my_binarySearch(arr, k):
     if len(arr) == 0:
         return False
     low, high = 0, len(arr) - 1
@@ -52,13 +43,13 @@ def binarySearch(arr, k):
             high = mid - 1
         else:
             low = mid + 1
-    return False
+    return
 
 
-
-
-
-
+# using python function for binary search
+def binarySearch(arr, k):
+    i = bisect_left(arr, k)
+    return True if -1 < i < len(arr) and arr[i] == k else False
 
 
 def maxSubArraySum(numbers):
@@ -75,22 +66,11 @@ def maxSubArraySum(numbers):
     return total_max
 
 
-
-
-
-
-
-
 def countAppearances(s):
     return Counter(s)
 
 
-
-
-
-
-
-
+# There are at least 4 ways to solve this question
 def listToDict(numbers: []):
     output = dict()
     for i in range(len(numbers)):
@@ -98,7 +78,19 @@ def listToDict(numbers: []):
     return output
 
 
+# 2
+def listToDict2(numbers: []):
+    return {i: numbers[i] for i in range(len(numbers))}
 
+
+# 3
+def listToDict3(numbers: []):
+    return dict(enumerate(numbers))
+
+
+# 4
+def listToDict4(numbers: []):
+    return dict(zip(range(len(numbers)), numbers))
 
 
 
@@ -106,11 +98,21 @@ def listToDict(numbers: []):
 
 if __name__ == '__main__':
     print(f'intersection: {intersection([1, 2, 3, 5], [1, 2])}')
+
     print(f'difference: {difference([1, 2, 3, 5], [1, 2])}')
-    # print(f'binarySearch: {binarySearch([1, 2, 3, 5, 6, 7], 5)}')
-    # print(f'maxSubArraySum: {maxSubArraySum([1, 2, 3, -5, 6, 7])}')
-    # print(f'countAppearances: {countAppearances("hello world")}')
-    # print(f'listToDict: {listToDict([1, 2, 3, 5])}')
+
+    print(f'my binarySearch: {my_binarySearch([1, 2, 3, 5, 6, 7], 5)}')
+    print(f'binarySearch: {binarySearch([1, 2, 3, 5, 6, 7], 5)}')
+
+    print(f'maxSubArraySum: {maxSubArraySum([1, 2, 3, -5, 6, 7])}')
+
+    print(f'countAppearances: {countAppearances("hello world")}')
+
+    print(f'listToDict 1: {listToDict([1, 2, 3, 5])}')
+    print(f'listToDict 2: {listToDict2([1, 2, 3, 5])}')
+    print(f'listToDict 3: {listToDict3([1, 2, 3, 5])}')
+    print(f'listToDict 4: {listToDict4([1, 2, 3, 5])}')
+
 
 
 
